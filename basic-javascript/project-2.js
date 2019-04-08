@@ -140,7 +140,7 @@ const averageTestScore = testScores => {
 };
 
 const largestNumber = numbers => {
-  let biggestInteger = 0;
+  let biggestInteger = -1000000000000;
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > biggestInteger) {
       biggestInteger = numbers[i];
