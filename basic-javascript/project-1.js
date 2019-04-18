@@ -89,6 +89,11 @@ const addExclamationPoint = str => {
 };
 
 const combineNames = (firstName, lastName) => {
+  if (!firstName || !lastName) {
+    throw new Error('needs both a first and last name');
+  } else if (typeof firstName !== 'string' || typeof lastName !== 'string') {
+    throw new Error('only strings can be passed');
+  }
   return `${firstName} ${lastName}`;
 };
 
@@ -137,5 +142,5 @@ module.exports = {
   getRectangleArea,
   getTriangleArea,
   getCircleArea,
-  getRectangularPrismVolume
+  getRectangularPrismVolume,
 };
